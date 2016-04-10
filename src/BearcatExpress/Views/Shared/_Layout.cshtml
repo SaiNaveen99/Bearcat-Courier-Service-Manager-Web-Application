@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <environment names="Development">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+        </environment>
+        <environment names="Staging,Production">
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>
+    </head>
+    <body>
+     
+        <div class="panel panel-default">
+            <div class="navbar navbar-default navbar-fixed-top" style="background-color:lightslategray;color:white">
+                <div class="panel-heading">
+                    <h1>Bearcat Express</h1>
+                </div>
+                <div style="background-color:cornflowerblue;">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a asp-controller="Home" asp-action="Index" class="navbar-brand">CourierServiceManager</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-controller="Home" asp-action="About">About</a></li>
+                            <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        </ul>
+                        @await Html.PartialAsync("_LoginPartial")
+                    </div>
+                </div>
+            </div>
+</div>
+
+            <div class="container body-content">
+                @RenderBody()
+             </div>
+             
+                <footer>
+                    <div class="table-bordered">
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-2">
+
+                                <h5> Extras</h5>
+                            </div>
+                            <div class="col-sm-3">
+                                <h5> Tools </h5>
+                            </div>
+                            <div class="col-sm-3">
+                                <h5> Contact Us </h5>
+                            </div>
+                            <h5> Follow us </h5>
+                            <div class="col-sm-3">
+
+                            </div>
+                        </div>
+                        <p>&copy; 2016 - BearcatExpress</p>
+                    </div>
+                </footer>
+            </div>
+
+            <environment names="Development">
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+            </environment>
+            <environment names="Staging,Production">
+                <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+                        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                        asp-fallback-test="window.jQuery">
+                </script>
+                <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
+                        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+                </script>
+                <script src="~/js/site.min.js" asp-append-version="true"></script>
+            </environment>
+
+            @RenderSection("scripts", required: false)
+</body>
+</html>

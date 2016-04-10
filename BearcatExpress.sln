@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B1F90BC-A741-41AD-BB91-561D3B2F9F7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC99BEF9-F7E5-4DB8-844D-0BE4FB03A24D}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BearcatExpress", "src\BearcatExpress\BearcatExpress.xproj", "{53699B17-D62F-45D6-917F-851E25C205CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53699B17-D62F-45D6-917F-851E25C205CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53699B17-D62F-45D6-917F-851E25C205CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53699B17-D62F-45D6-917F-851E25C205CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53699B17-D62F-45D6-917F-851E25C205CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53699B17-D62F-45D6-917F-851E25C205CF} = {3B1F90BC-A741-41AD-BB91-561D3B2F9F7F}
+	EndGlobalSection
+EndGlobal
