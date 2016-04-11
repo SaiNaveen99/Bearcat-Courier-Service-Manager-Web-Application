@@ -17,37 +17,40 @@
     <body>
      
         <div class="panel panel-default">
-            <div class="navbar navbar-default navbar-fixed-top" style="background-color:lightslategray;color:white">
+            <div class="col-md-12 navbar-fixed-top" style="background-color:deepskyblue;color:black;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
                 <div class="panel-heading">
-                    <h1>Bearcat Express</h1>
+                    <h3>Bearcat Express</h3>
                 </div>
-                <div style="background-color:cornflowerblue;">
-                    <div class="navbar-header">
+                <div>
+                    <div class="nav nav-tabs-justified">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a asp-controller="Home" asp-action="Index" class="navbar-brand">CourierServiceManager</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li><a asp-controller="Home" asp-action="About">About</a></li>
-                            <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-                        </ul>
-                        @await Html.PartialAsync("_LoginPartial")
+                        @*<a style="color:black" asp-controller="Home" asp-action="Index" class="navbar-brand">CourierServiceManager</a>*@
                     </div>
                 </div>
             </div>
-</div>
+        </div>
+
+                    <div style="background-color:paleturquoise;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="nav nav-stacked">
+                        <ul class="nav navbar-nav">
+                            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Shipping">Shipping</a></li>
+                            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="TrackOrder">Track</a></li>
+                            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="About">About</a></li>
+                        </ul>
+                        @await Html.PartialAsync("_LoginPartial")
+                    </div>
+                
 
             <div class="container body-content">
                 @RenderBody()
              </div>
              
-                <footer>
+                <div class="panel-footer">
                     <div class="table-bordered">
                         <div class="row">
                             <div class="col-sm-1">
@@ -67,10 +70,10 @@
 
                             </div>
                         </div>
-                        <p>&copy; 2016 - BearcatExpress</p>
+                        <p style="text-align:center">&copy; 2016 - BearcatExpress</p>
                     </div>
-                </footer>
-            </div>
+                </div>
+          
 
             <environment names="Development">
                 <script src="~/lib/jquery/dist/jquery.js"></script>
