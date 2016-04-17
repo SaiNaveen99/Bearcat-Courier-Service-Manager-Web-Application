@@ -1,0 +1,128 @@
+@model BearcatExpress.Models.ShippingAddress
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>ShippingAddress</h4>
+        <hr />
+        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="receiverCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverCity" class="form-control" />
+                <span asp-validation-for="receiverCity" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="receiverCountry" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverCountry" class="form-control" />
+                <span asp-validation-for="receiverCountry" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="receiverHouseNum" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverHouseNum" class="form-control" />
+                <span asp-validation-for="receiverHouseNum" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="receiverName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverName" class="form-control" />
+                <span asp-validation-for="receiverName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="receiverPhoneNum" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverPhoneNum" class="form-control" />
+                <span asp-validation-for="receiverPhoneNum" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="receiverState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverState" class="form-control" />
+                <span asp-validation-for="receiverState" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="receiverStreet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="receiverStreet" class="form-control" />
+                <span asp-validation-for="receiverStreet" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderCity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderCity" class="form-control" />
+                <span asp-validation-for="senderCity" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderCountry" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderCountry" class="form-control" />
+                <span asp-validation-for="senderCountry" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderHouseNum" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderHouseNum" class="form-control" />
+                <span asp-validation-for="senderHouseNum" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderName" class="form-control" />
+                <span asp-validation-for="senderName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderPhoneNum" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderPhoneNum" class="form-control" />
+                <span asp-validation-for="senderPhoneNum" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderState" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderState" class="form-control" />
+                <span asp-validation-for="senderState" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="senderStreet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="senderStreet" class="form-control" />
+                <span asp-validation-for="senderStreet" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

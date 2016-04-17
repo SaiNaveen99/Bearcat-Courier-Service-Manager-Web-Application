@@ -1,0 +1,110 @@
+@model IEnumerable<BearcatExpress.Models.ShippingAddress>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverHouseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverPhoneNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderHouseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderPhoneNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderStreet)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverHouseNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverPhoneNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderHouseNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderPhoneNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderStreet)
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.AddressId">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.AddressId">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.AddressId">Delete</a>
+        </td>
+    </tr>
+}
+</table>
