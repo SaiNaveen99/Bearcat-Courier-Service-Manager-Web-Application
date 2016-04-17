@@ -1,0 +1,87 @@
+@model BearcatExpress.Models.ShippingAddress
+
+<div class="container-fluid">
+    <div class="row">
+        <h1> Address Information </h1>
+    </div>
+    <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+    <div class="row">
+
+        <form asp-action="View">
+            <div class="col-md-6 form-group">
+                <h4> From Address </h4>
+                <label asp-for="senderName" class="control-label"></label>
+                <input asp-for="senderName" class="form-control">
+                <span asp-validation-for="senderName" class="text-danger" />
+
+                <label asp-for="senderCountry" class="control-label"></label>
+                <input asp-for="senderCountry" class="form-control">
+                <span asp-validation-for="senderCountry" class="text-danger" />
+
+
+                <label asp-for="senderState" class="control-label"></label>
+                <input asp-for="senderState" class="form-control">
+                <span asp-validation-for="senderState" class="text-danger" />
+
+
+                <label asp-for="senderCity" class="control-label"></label>
+                <input asp-for="senderCity" class="form-control">
+                <span asp-validation-for="senderCity" class="text-danger" />
+
+                <label asp-for="senderStreet" class="control-label"></label>
+                <input asp-for="senderStreet" class="form-control">
+                <span asp-validation-for="senderStreet" class="text-danger" />
+
+
+                <label asp-for="senderHouseNum" class="control-label"></label>
+                <input asp-for="senderHouseNum" class="form-control">
+                <span asp-validation-for="senderHouseNum" class="text-danger" />
+
+                <label asp-for="senderPhoneNum" class="control-label"></label>
+                <input asp-for="senderPhoneNum" class="form-control">
+                <span asp-validation-for="senderPhoneNum" class="text-danger" />
+
+            </div>
+            <div class="col-md-6 form-group">
+                <h4>To Address</h4>
+                <label asp-for="receiverName" class="control-label"></label>
+                <input asp-for="receiverName" class="form-control">
+                <span asp-validation-for="receiverName" class="text-danger" />
+
+                <label asp-for="receiverCountry" class="control-label"></label>
+                <input asp-for="receiverCountry" class="form-control">
+                <span asp-validation-for="receiverCountry" class="text-danger" />
+
+                <label asp-for="receiverState" class="control-label"></label>
+                <input asp-for="receiverState" class="form-control">
+                <span asp-validation-for="receiverState" class="text-danger" />
+
+                <label asp-for="receiverCity" class="control-label"></label>
+                <input asp-for="receiverCity" class="form-control">
+                <span asp-validation-for="receiverCity" class="text-danger" />
+
+                <label asp-for="receiverStreet">Street</label>
+                <input asp-for="receiverStreet" class="form-control">
+                <span asp-validation-for="receiverStreet" class="text-danger" />
+
+                <label asp-for="receiverHouseNum"></label>
+                <input asp-for="receiverHouseNum" class="form-control">
+                <span asp-validation-for="receiverHouseNum" class="text-danger" />
+
+                <label asp-for="receiverPhoneNum" class="form-control"></label>
+                <input asp-for="receiverPhoneNum" class="form-control">
+                <span asp-validation-for="receiverPhoneNum" class="text-danger" />
+
+
+
+                <input type="submit" value="Continue" class="btn btn-default"></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
