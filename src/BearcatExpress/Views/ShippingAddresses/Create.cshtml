@@ -4,13 +4,14 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h3>Create shipment</h3>
 
 <form asp-action="Create">
     <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
     <div class="col-md-5 form-group">
-        <h4> From Address </h4>
+       
         <div class="row">
+            <h4> From Address </h4>
             <label asp-for="senderName" class="control-label"></label>
             <input asp-for="senderName" class="form-control">
             <span asp-validation-for="senderName" class="text-danger" />
@@ -54,8 +55,9 @@
         </div>
     <div class="col-sm-2"></div>
     <div class="col-md-5 form-group">
-        <h4>To Address</h4>
+       
         <div class="row">
+            <h4>To Address</h4>
             <label asp-for="receiverName" class="control-label"></label>
             <input asp-for="receiverName" class="form-control">
             <span asp-validation-for="receiverName" class="text-danger" />
