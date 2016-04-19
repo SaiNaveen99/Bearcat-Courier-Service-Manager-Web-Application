@@ -1,0 +1,102 @@
+@model BearcatExpress.Models.ShippingAddress
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ShippingAddress</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverHouseNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverHouseNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverPhoneNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverPhoneNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.receiverStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderHouseNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderHouseNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderPhoneNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderPhoneNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.senderStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.senderStreet)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.AddressId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>
