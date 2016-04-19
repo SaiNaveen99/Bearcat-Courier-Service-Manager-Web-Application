@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using BearcatExpress.Models;
 using BearcatExpress.Services;
 
+
 namespace BearcatExpress
 {
     public class Startup
@@ -89,6 +90,11 @@ namespace BearcatExpress
             app.UseStaticFiles();
 
             app.UseIdentity();
+            app.UseFacebookAuthentication(options =>
+            {
+                options.AppId = Configuration["Authentication:Facebook:AppId"];
+                options.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            });
 
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
 
@@ -98,6 +104,8 @@ namespace BearcatExpress
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+           
         }
 
         // Entry point for the application.
