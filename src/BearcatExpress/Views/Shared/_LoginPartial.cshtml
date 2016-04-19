@@ -16,10 +16,13 @@
 }
 else
 {
-    <p style="padding-right:40px;padding-top:20px" class="pull-right">
-        @*<li>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-primary btn-sm pull-left " })</li>   
-        <li style="padding-left:5px;">@Html.ActionLink("Login", "Login", "Account", null, new { @class = "btn btn-primary btn-sm pull-right " })</li>*@
-        <a asp-controller="Account" asp-action="Register" class="btn btn-primary btn-md" style="padding-right:10px;" >Register</a>
-        <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-md" >Log in</a>
-    </p>
+    <div style="padding-right:30px;padding-top:10px;" class="pull-right">
+        <ul class="nav navbar-nav navbar-right">
+            @*<li>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-primary btn-sm pull-left " })</li>
+            <li style="padding-left:5px;">@Html.ActionLink("Login", "Login", "Account", null, new { @class = "btn btn-primary btn-sm pull-right " })</li>*@
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary btn-md" style="padding-right:10px;">Sign Up</a>
+            <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-md">Log in</a>
+            </ul>
+        
+</div>
 }

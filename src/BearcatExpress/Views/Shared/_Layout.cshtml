@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,27 +16,33 @@
 
 </head>
 <body>
-    <div style="background-image:url('/images/new.jpg');height: 105px; width: 100%;padding-top:10px">
-          @await Html.PartialAsync("_LoginPartial")
-         <h2 style="color:black;font-family:Corbel ;padding:0px 15px 10px">Bearcat Express</h2>
+    @using System.Security.Claims
+    <div style="background-image:url('/images/new.jpg');height: 75px; width: 100%;padding-top:10px">
+         
+         <h2 style="color:black;font-family:Corbel ;padding:0px 115px 10px">Bearcat Express</h2>
      </div>
 
-    <div style="background-color:darkorange;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding-left:80px;" class="nav nav-stacked">
+    <div style="background-color:lightsalmon;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding-left:105px;" class="nav nav-stacked">
         
         <ul class="nav navbar-nav">
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Shipping">Shipping</a></li>
+            <li><a style="color:black;font-size:medium" asp-controller="ShippingAddresses" asp-action="Create">Shipping</a></li>
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="TrackOrder">Track</a></li>
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="About">About</a></li>
+            @if (User.IsSignedIn() && User.IsInRole("admin"))
+            {
+                <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+            }
         </ul>
-
+        
+        @await Html.PartialAsync("_LoginPartial")
     </div>
+   
 
-
-    <div class="container body-content">
+    <div class="container body-content" >
         @RenderBody()
     </div>
-    <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="navbar navbar-default ">
         <div class="row">
             <div class="col-sm-1">
             </div>
