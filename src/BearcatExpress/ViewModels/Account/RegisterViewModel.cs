@@ -24,10 +24,8 @@ namespace BearcatExpress.ViewModels.Account
 
 
         [Required]
-        [Phone]
-        [DataType(DataType.PhoneNumber)]
         [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; }
+        public string MobileNumber { get; set; }
 
         [Required]
         [Display(Name = "User Name")]

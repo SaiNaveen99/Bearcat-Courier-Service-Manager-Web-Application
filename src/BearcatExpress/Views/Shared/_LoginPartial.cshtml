@@ -4,15 +4,16 @@
 {
    
     <form asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
-        <ul style="padding-right:40px;padding-top:20px"  class="nav navbar-nav navbar-right">
-            <li>
-                <a style="color:black" asp-controller="Manage" asp-action="Index" title="Manage">Welcome @User.GetUserName()!</a>
-            </li>
-            <li>
-                <button type="submit" class="btn btn-primary navbar-btn navbar-link">Log off</button>
-            </li>
-        </ul>
-    </form>
+        <div style="padding-right:30px;padding-top:10px;" class="pull-right">
+            <ul class="nav navbar-nav navbar-right">
+               
+                    <a style="color:black"  asp-controller="Manage" asp-action="Index" title="Manage">Welcome @User.GetUserName()! &nbsp;</a> 
+                             
+                    <button type="submit" class="btn btn-primary " >Log off</button>
+                
+            </ul>
+            </div>
+</form>
 }
 else
 {

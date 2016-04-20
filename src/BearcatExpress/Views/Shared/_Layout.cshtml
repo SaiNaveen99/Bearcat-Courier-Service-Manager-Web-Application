@@ -29,9 +29,9 @@
             <li><a style="color:black;font-size:medium" asp-controller="ShippingAddresses" asp-action="Create">Shipping</a></li>
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="TrackOrder">Track</a></li>
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="About">About</a></li>
-            @if (User.IsSignedIn() && User.IsInRole("admin"))
+            @if (User.IsSignedIn() && User.IsInRole("Admin"))
             {
-                <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+                <li><a style="color:black;font-size:medium" asp-controller="Admin" asp-action="Index">Admin</a></li>
             }
         </ul>
         
@@ -42,23 +42,24 @@
     <div class="container body-content" >
         @RenderBody()
     </div>
-    <div class="navbar navbar-default ">
-        <div class="row">
-            <div class="col-sm-1">
-            </div>
-            <div class="col-sm-3">
+  
+    <div style="padding-top:10%;">
+        <hr />
+        <div class="row" style="padding-left:30px;">
+            <div class="col-sm-2">
                 <p>Email:<a href="mailto:s525078@mail.nwmissouri.edu?Subject=Feedback" target="_blank"><img src="~/images/Message Squared-48.png"></a></p>
             </div>
-            <div class="col-sm-3">
-                    Follow Us:
-                    <a href="https://www.facebook.com/ashish.pandey91" target="_blank"><img src="~/images/Facebook-48.png"></a>
-                    <a href="https://twitter.com/Ashish_Pandey91" target="_blank"><img src="~/images/Twitter-48.png"></a>                
-            </div><br/>
-            <div class="row">
-                <p style="text-align:center">&copy; 2016 - BearcatExpress</p>
+            <div class="col-sm-2 pull-right">
+                Follow Us:
+                <a href="https://www.facebook.com/ashish.pandey91" target="_blank"><img src="~/images/Facebook-48.png"></a>
+                <a href="https://twitter.com/Ashish_Pandey91" target="_blank"><img src="~/images/Twitter-48.png"></a>
             </div>
         </div>
+        <div class="row">
+            <p style="text-align:center">&copy; 2016 - BearcatExpress</p>
+        </div>
     </div>
+    
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

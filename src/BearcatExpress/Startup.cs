@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using BearcatExpress.Models;
 using BearcatExpress.Services;
-
+using Microsoft.AspNet.Identity;
 
 namespace BearcatExpress
 {
@@ -57,7 +57,7 @@ namespace BearcatExpress
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public async void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ApplicationDbContext context, IServiceProvider serviceProvider)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -105,8 +105,43 @@ namespace BearcatExpress
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-           
+            await CreateRoles(context, serviceProvider);
         }
+
+
+
+        private async Task CreateRoles(ApplicationDbContext context, IServiceProvider serviceProvider)
+        {
+
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            string[] roleNames = { "Admin", "Member" };
+            IdentityResult roleResult;
+            foreach (var roleName in roleNames)
+            {
+                var roleExist = await RoleManager.RoleExistsAsync(roleName);
+                if (!roleExist)
+                {
+                    roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
+            //List<IdentityRole> roles = new List<IdentityRole>();
+            //roles.Add(new IdentityRole {Name = "Admin", NormalizedName = "ADMIN" });
+            //roles.Add(new IdentityRole { Name = "Member", NormalizedName = "MEMBER" });
+            //foreach (var role in roles)
+            //{
+            //    var roleExists = await RoleManager.RoleExistsAsync(role.Name);
+            //    if (!roleExists)
+            //    {
+            //        context.Roles.Add(role);
+            //        context.SaveChanges();
+            //    }
+            //}
+            //var user = await UserManager.FindByIdAsync("4da72437-7b6f-4a40-a465-6e986a1d7073");
+            //await UserManager.AddToRoleAsync(user,"Administrator");
+        }
+
+
 
         // Entry point for the application.
         public static void Main(string[] args) => WebApplication.Run<Startup>(args);
