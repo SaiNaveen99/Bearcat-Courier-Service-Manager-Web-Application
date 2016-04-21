@@ -41,7 +41,15 @@ namespace BearcatExpress.Controllers
         // GET: ShippingAddresses/Create
         public IActionResult Create()
         {
-            return View();
+            if(User.Identity.IsAuthenticated)
+            {
+                return View("Create");
+            }
+            else
+            {
+                return View("ShippingWithoutLogin");
+            }
+          
         }
 
         // POST: ShippingAddresses/Create
@@ -53,7 +61,7 @@ namespace BearcatExpress.Controllers
             {
                 _context.ShippingAddress.Add(shippingAddress);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ShipmentDetails");
             }
             return View(shippingAddress);
         }
@@ -115,6 +123,20 @@ namespace BearcatExpress.Controllers
             _context.ShippingAddress.Remove(shippingAddress);
             _context.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult ShipmentDetails()
+        {
+            return View();
+        }
+
+        public IActionResult Payment()
+        {
+            return View();
+        }
+        public IActionResult Confirmation()
+        {
+            return View();
         }
     }
 }

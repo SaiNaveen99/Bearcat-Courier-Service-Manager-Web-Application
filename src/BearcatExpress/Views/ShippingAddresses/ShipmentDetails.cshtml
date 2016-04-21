@@ -1,0 +1,61 @@
+﻿<h1>2. Shipment Details</h1>
+<br />
+<form asp-controller="ShippingAddresses" asp-action="Payment">
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label for="packageContent">Package Content :</label>
+        </div>
+        <div class="col-md-3">
+            <select id="sel1">
+                <option>Document</option>
+                <option>Goods</option>
+                <option>Extra Care Items</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="packageWeight">Package Weight :</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="packageWeight" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="ShipmentType">Shipment Type :</label>
+        </div>
+        <div class="col-md-3">
+            <div class="radio">
+                <label><input type="radio" name="optradio">Express(2-3 Days)</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Ground (3-5 Days)</label>
+            </div>
+            <div class="radio disabled">
+                <label><input type="radio" name="optradio">Normal (7-21 Days)</label>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <label for="packageContent">Package Type:</label>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" id="sel1">
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+            </select>
+        </div>
+    </div>
+
+    <br />
+    <div class="col-md-10">
+
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-success">Continue</button>
+    </div>
+</form>

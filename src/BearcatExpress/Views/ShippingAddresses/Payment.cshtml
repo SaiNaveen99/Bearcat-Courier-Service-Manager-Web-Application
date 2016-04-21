@@ -1,0 +1,77 @@
+﻿<h1>3. Payment</h1>
+<br />
+<form asp-controller="ShippingAddresses" asp-action="Confirmation">
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label for="packageContent">Bill to :</label>
+        </div>
+        <div class="col-md-3">
+            <select id="sel1">
+                <option>CREDIT CARD</option>
+                <option>DEBIT CARD</option>
+            </select>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            <label for="packageContent">Credit Card types:</label>
+        </div>
+        <div class="col-md-3">
+            <select id="sel1">
+                <option>VISA CARD</option>
+                <option>MASTER CARD</option>
+                <option>DISCOVER CARD</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="Creditcardno">Credit Card no:</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="Creditcardno" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <label for="Securitycode">Security code:</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="Securitycode" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="expirydate">Expiry Date</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="expirydate" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="nameoncard">Name on card</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="name on card" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="email">Email</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" id="email" />
+        </div>
+    </div>
+
+
+    <br />
+    <div class="col-md-10">
+
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-success">Continue</button>
+    </div>
+</form>

@@ -22,5 +22,20 @@ namespace BearcatExpress.Controllers
         {
             return View();
         }
+
+        public IActionResult FAQs()
+        {
+            return View();
+        }
+        public IActionResult Track()
+        {
+            return View("Track");
+        }
+
+        public IActionResult TrackOrderResult()
+        {
+            return View("TrackOrderResult");
+        }
+
     }
 }

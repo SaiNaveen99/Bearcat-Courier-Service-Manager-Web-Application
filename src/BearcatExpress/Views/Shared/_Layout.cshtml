@@ -27,7 +27,7 @@
         <ul class="nav navbar-nav">
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a style="color:black;font-size:medium" asp-controller="ShippingAddresses" asp-action="Create">Shipping</a></li>
-            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="TrackOrder">Track</a></li>
+            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Track">Track</a></li>
             <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="AboutUs">About</a></li>
             @if (User.IsSignedIn() && User.IsInRole("Admin"))
             {
@@ -48,6 +48,7 @@
         <div class="row" style="padding-left:30px;">
             <div class="col-sm-2">
                 <p>Email:<a href="mailto:s525078@mail.nwmissouri.edu?Subject=Feedback" target="_blank"><img src="~/images/Message Squared-48.png"></a></p>
+                <a asp-controller="Home" asp-action="FAQs"><p>FAQs</p></a>
             </div>
             <div class="col-sm-2 pull-right">
                 Follow Us:
