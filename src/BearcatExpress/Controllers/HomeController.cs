@@ -17,5 +17,10 @@ namespace BearcatExpress.Controllers
         {
             return View();
         }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
     }
 }

@@ -126,7 +126,7 @@ namespace BearcatExpress.Controllers
                     //    "Please confirm your account by clicking this link: <a href=\"" + callbackUrl + "\">link</a>");
 
                     var user1 = await _userManager.FindByIdAsync(user.Id);
-                    await _userManager.AddToRoleAsync(user1, "Admin");
+                    await _userManager.AddToRoleAsync(user1, "Member");
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation(3, "User created a new account with password.");

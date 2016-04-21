@@ -1,4 +1,5 @@
-﻿﻿<!DOCTYPE html>
+﻿
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -16,33 +17,26 @@
 
 </head>
 <body>
-    @using System.Security.Claims
-    <div style="background-image:url('/images/new.jpg');height: 75px; width: 100%;padding-top:10px">
-     
-         <h2 style="color:black;font-family:Corbel;padding:0px 115px 10px">Bearcat Express</h2>
-     </div>
-
-    <div style="background-color:lightsalmon;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding-left:105px;" class="nav nav-stacked">
-        
-        <ul class="nav navbar-nav">
-            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a style="color:black;font-size:medium" asp-controller="ShippingAddresses" asp-action="Create">Shipping</a></li>
-            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="TrackOrder">Track</a></li>
-            <li><a style="color:black;font-size:medium" asp-controller="Home" asp-action="AboutUs">About</a></li>
-            @if (User.IsSignedIn() && User.IsInRole("Admin"))
-            {
-                <li><a style="color:black;font-size:medium" asp-controller="Offers" asp-action="Create">Admin</a></li>
-            }
-        </ul>
-        
-        @await Html.PartialAsync("_LoginPartial")
-    </div>
-   
-
-    <div class="container body-content" >
-        @RenderBody()
-    </div>
   
+
+    <div class="container body-content">
+        <h1 style="text-align: center">About Us</h1>
+       
+        <p style="font-size: large">
+            Bearcat Express is a newly established courier service firm with a vision to become leading
+            courier service <br> in the industry by providing our customers with professional, prompt &
+            courteous services at an industry <br> competitive rate. Our management team is comprised of
+            industry profession with over 10 years <br> experience in the courier business.No matter what you
+            are sending, we are committed to your satisfaction <br> through reliable, point to point, pick up and
+            delivery of your important materials. Bearcat courier services <br> is your complete delivery
+            solution-- providing a competitive advantage to your customers through dedicated <br>
+            personnel, incomparable quality and cutting-edge technology.
+
+        </p>
+        <h4>Shipments delivered on time with no hassle.</h4>
+
+    </div>
+
     <div style="padding-top:5%;">
         <hr />
         <div class="row" style="padding-left:30px;">
@@ -59,7 +53,7 @@
             <p style="text-align:center">&copy; 2016 - BearcatExpress</p>
         </div>
     </div>
-    
+
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -78,6 +72,6 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
-    @RenderSection("scripts", required: false)
+   
 </body>
 </html>

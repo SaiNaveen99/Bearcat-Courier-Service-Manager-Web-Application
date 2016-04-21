@@ -18,5 +18,6 @@ namespace BearcatExpress.Models
             // Add your customizations after calling base.OnModelCreating(builder);
         }
         public DbSet<ShippingAddress> ShippingAddress { get; set; }
+        public DbSet<Offer> Offer { get; set; }
     }
 }
